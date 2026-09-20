@@ -170,14 +170,14 @@ The number you set in config.py, and how you got there.
 
 ## How I Used AI
 
-<!-- Two specific moments. For each: what you asked for, what came back, and
+ Two specific moments. For each: what you asked for, what came back, and
      what you changed about it.
 
      "I asked Claude to write the chunking function from my notes. It ignored
      the overlap, so I added that myself" is the level of detail we're after.
      "I used AI to help me code" is not.
 
-     Milestone 5. -->
+     Milestone 5. 
 
 **1.**
 
