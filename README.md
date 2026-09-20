@@ -1,6 +1,6 @@
 # The Unofficial Guide
 
-<!-- Replace this line with your name and which corpus you picked. -->
+**Piyaporn Puangprasert(Nan) corpus : city_guides index **
 
 > **This file is your submission.** Fill it in as you go — most sections get
 > written during the milestone that produces them, not at the end.
@@ -21,18 +21,23 @@
 
 ## What This Does
 
-<!-- Three or four sentences. Which corpus you picked, and the kinds of
-     questions your system answers. Write it for someone who has never seen
-     this repo.
+ I choose a campus_life corpus:
+ - It is about 88 short posts ( 1-3 paragraphs each) covering on student-life,housing, parking permit, dinning, financial aid, etc. 
+  Questions can be ask: for example, 
+  - when is the add/drop class deadline?
+  - How to apply financial aid?
+  - How far from dinning hall to some class building?
+  - Etc.
+  P.S. The answer will come from the material topic (No, Outside sources such as Google search)
 
-     Milestone 5. -->
 
 ## Chunking Strategy
 
 **Chunk size:**
+88 chunks
 **Overlap:**
 
-<!-- What about YOUR documents made you pick these numbers? Short posts and
+What about YOUR documents made you pick these numbers? Short posts and
      long sectioned guides don't want the same chunking, and "800 seemed
      reasonable" earns nothing. Point at something you noticed when you read
      the documents in Milestone 1.
@@ -40,54 +45,101 @@
      If you changed your mind partway through, say so and say why. That's worth
      more than pretending you got it right first time.
 
-     Milestone 3. -->
+     Milestone 3. 
+
+Answer: I asked "How do I apply for financial aid?" and the system responded
+"no information explaining how to apply for financial aid" — the corpus
+doesn't cover an application process. Next I changed the question to match
+what the corpus actually contains:
+
+```
+python app.py ask "What are the graduation requirements?"
+```
 
 ## Sample Chunks
 
-<!-- Five chunks, pasted as text. Label each one and name the file it came from
+ Five chunks, pasted as text. Label each one and name the file it came from
      AND the function that produced it — the grader checks your code against
      what you claim here.
 
      `python app.py chunks -n 5` prints all three for you. Copy them straight
      across.
 
-     Milestone 3. -->
+     Milestone 3. 
 
-**Chunk 1** — source: `` — produced by: ``
-
-```
-```
-
-**Chunk 2** — source: `` — produced by: ``
+**Chunk 1** — source: `` admin_add_drop_deadline.txt#0   —  produced by: chunker.py::fallback_split ``
 
 ```
+On the add/drop deadline
+
+You can add a course through the end of the second week. Dropping is a longer window — through the end of week six — but a drop after week two shows as a W on your transcript. Nothing anywhere on the registrar's site says this plainly, and students find out from each other.
 ```
 
-**Chunk 3** — source: `` — produced by: ``
+**Chunk 2** — source: `` course_biol_160.txt#0   —  produced by: chunker.py::fallback_split ``
 
 ```
+BIOL 160 Cell Biology
+
+I lived here my sophomore year. Format is lecture three times a week with a weekly lab. Assessment: four unit tests and a cumulative final. Not curved.
+
+Expect 9 to 11 hours a week, the heaviest first-year course by reputation.
+
+The one piece of advice: the unit tests come fast, roughly every three weeks; falling behind once is very hard to recover from.
 ```
 
-**Chunk 4** — source: `` — produced by: ``
+**Chunk 3** — source: `` course_hist_118_workload.txt#0  — produced by: chunker.py::fallback_split ``
 
 ```
+Workload for HIST 118 Modern World History
+
+People keep asking so: a lot of reading, about 120 pages a week, but no problem sets. That's real time, not optimistic time.
+
+It's front-loaded — the first month is heavier than the rest, partly because you're learning the format.
 ```
 
-**Chunk 5** — source: `` — produced by: ``
+**Chunk 4** — source: ``dining_pellew_dining_hall_followup.txt#0  — produced by: chunker.py::fallback_split``
 
 ```
+Re: Pellew Dining Hall
+
+Adding to what people have said about Pellew Dining Hall. The wait figure of 12 to 18 minutes at peak matches what I've seen. If you're trying to eat between classes, go before 11:45 and it's a different building entirely.
+
+Also worth saying: the furthest hall from anywhere, next to the athletics centre. Nobody tells you this at orientation.
+```
+
+**Chunk 5** — source: `` housing_innisfree_hall.txt#0  — produced by: chunker.py::fallback_split``
+
+```
+Innisfree Hall — what it's actually like
+
+Transferred in last year, so take this with a grain of salt. Built 1991, renovated 2022. Rooms are doubles arranged as pairs sharing one bathroom between two rooms.
+
+The good: the shared-bathroom-between-two-rooms arrangement is the best compromise on campus.
+
+The bad: no air conditioning, which matters for the first three weeks of September.
+
+Laundry costs $1.75 wash, $1.75 dry, app-based. On noise: moderate; the building is L-shaped and the short wing is much quieter.
+
+For each one, ask: could someone answer a question using only this,
+without reading what came before or after?
 ```
 
 ## Sample Answer
 
-<!-- One complete question and answer, pasted as text, with the source line
-     visible. Milestone 4. -->
+One complete question and answer, pasted as text, with the source line
+     visible. Milestone 4. 
 
-**Question:**
+**Question:** `python app.py ask "What are the graduation requirements?"`
 
 **Answer:**
 
 ```
+(best distance 0.327, cutoff 0.6)
+
+Based on the provided documents, the graduation requirements are 120 credit
+hours, a completed major, the general education requirements, and the
+writing-intensive requirement of two courses taken in different departments
+(admin_graduation_requirements.txt).
 ```
 
 **My relevance cutoff:**
