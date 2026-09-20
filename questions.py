@@ -23,11 +23,11 @@ names a target of "4 of 5", and four of three is not a thing.
 
 QUESTIONS = [
     # {"question": "...", "expects": "..."},
-    {"question": "", "expects": ""},
-    {"question": "", "expects": ""},
-    {"question": "", "expects": ""},
-    {"question": "", "expects": ""},
-    {"question": "", "expects": ""},
+    {"question": "What do students say about wait times at Commons during lunch?", "expects": "long"},
+    {"question": "When is the add/drop period for this semester?", "expects": "late September"},
+    {"question": "What time does the library close on weekends?", "expects": "shorter hours"},
+    {"question": "How do I get a parking permit?", "expects": "short-term"},
+    {"question": "What majors are offered in the Computer Science department?", "expects": "B.S."},
 ]
 
 # Questions from a different world entirely. Your gate should refuse all five.
@@ -38,11 +38,11 @@ QUESTIONS = [
 # records what happened, so criterion 3 has evidence in the run log alongside
 # the others. They cost no model calls: a refusal never reaches the model.
 OUT_OF_SCOPE = [
-    "What is the capital of Mongolia?",
-    "How do I change the oil in a diesel engine?",
-    "Who won the 1994 World Cup?",
-    "What is the recommended dosage of ibuprofen for a headache?",
-    "How do I write a for loop in Rust?",
+    "What is the capital of Thailand?",
+    "How do I win the lottery?",
+    "Who won the 2026 World Cup?",
+    "How to get a software engineering job?",
+    "How to finish a master degree in May 2027?",
 ]
 
 

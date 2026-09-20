@@ -144,18 +144,29 @@ writing-intensive requirement of two courses taken in different departments
 
 **My relevance cutoff:**
 
-<!-- The number you set in config.py, and how you got there.
+The number you set in config.py, and how you got there.
 
      You ran five questions your corpus covers and the five in OUT_OF_SCOPE
      that it clearly doesn't, and wrote down the best distance for each. What
      did those two groups look like? Where was the gap? Put the actual numbers
      here — the table below wants all ten rows.
 
-     Milestone 4. -->
+     Milestone 4. 
 
 | Question | In corpus? | Best distance |
 |---|---|---|
-|  |  |  |
+|What do students say about wait times at Commons during lunch?  | Yes | 0.308 |
+|When is the add/drop period for this semester?  | Yes | 0.273 |
+|What time does the library close on weekends?  | Yes | 0.414 |
+|How do I get a parking permit?  |Yes  | 0.534 |
+|What majors are offered in the Computer Science department? | Yes | 0.579 |
+
+| What is the capital of Thailand? | No | 0.897  |
+| How do I win the lottery? | No | 0.549 |
+| Who won the 2026 World Cup? | No | 0.856 |
+| How to get a software engineering job? | No | 0.734 |
+| How to finish a master degree in May 2027? | No | 0.568 |
+
 
 ## How I Used AI
 
