@@ -25,7 +25,30 @@ contains the answer.
 **Why this target:**
  e.g. "One of my questions is about a topic only two documents mention, so
      I expect that one to be hard." 
+  "question 1 ": "What do students say about wait times at Commons during lunch?", "expects 1 ": "long",
+  The answer is Students say that wait times at Kestrel Commons are 20 to 25 minutes between 12:15 and 1:00. It check from the document more than the expectation:
+  I give 80% reasonable based on document
 
+"question 2": "When is the add/drop period for this semester?", "expects": "late September",
+     You can add a course through the end of the second week, and dropping runs through the end of week six. (Source: admin_add_drop_deadline.txt)
+
+Sources retrieved: admin_add_drop_deadline.txt, admin_pass_fail_option.txt, admin_study_abroad.txt, admin_withdrawal_deadline.txt, course_cs_340.txt
+
+The answer is rely on document more than expectation
+I gave 80% reasonable based on document
+
+"question 3": "What time does the library close on weekends?", "expects": "shorter hours",
+The answer:Based on the provided documents, there is no mention of what time the library closes on weekends; it only states that the library is open until 2am during term and until 10pm during reading week. 
+
+Source: `study_library_hours.txt`
+There are not exactly answer on both document and the expectation.
+I gave 85% reasonable because there are no exact time the use ask for. The system try to find the best answer that accepted. 
+
+ "question 4": "How do I get a parking permit?", "expects": "short-term",
+ Based on the provided documents, student permits for the west lots go on sale in August. The documents do not explain the exact purchasing process beyond stating when they go on sale. 
+
+Source: `admin_parking_permits.txt`
+I give 85% reasonable based on the document. Not rely on expectation
 
 ---
 
@@ -37,6 +60,12 @@ Every answer the system produces names at least one source document.
 Why all five and not four? What about your setup makes that achievable —
      or what would have to go wrong for it not to be?
 
+1. "question 1 ": "What do students say about wait times at Commons during lunch?" Source: `dining_kestrel_commons.txt`
+2. "question 2":"When is the add/drop period for this semester?" (Source: admin_add_drop_deadline.txt)
+3. "question 3": "What time does the library close on weekends?"
+(Source: study_library_hours.txt )
+4. question 4": "How do I get a parking permit?"
+(Source: admin_parking_permits.txt )
 ---
 
 ## 3. The relevance gate stops out-of-corpus questions
@@ -51,25 +80,15 @@ The five questions are the ones in `OUT_OF_SCOPE` at the bottom of
      just keep five of them, or the "4 of 5" above has nothing to be 4 of. 
 
 **Why this target:**
-<!-- What did your distances look like when you set the cutoff in Milestone 4?
-     Was there a clean gap, or did the two groups overlap? -->
+ What did your distances look like when you set the cutoff in Milestone 4?
+     Was there a clean gap, or did the two groups overlap?
 
 ---
 
 ## 4. Something about your chunks
 
-<!-- YOU WRITE THIS ONE.
-
-     How would you know if your chunks were the right size? Name something
-     countable or observable.
-
-     Examples of the right shape — don't copy these, they should come from
-     what you actually saw in Milestone 3:
-       - "At least 4 of 5 sampled chunks read as a complete thought, with no
-          sentence cut in half at either end."
-       - "No chunk is shorter than 200 characters, since anything below that
-          in my corpus turned out to be a heading with no content under it." -->
-
+All my 5 chunks are ok. did not break any of these document into multiple pieces. It may 
+see a multiple line. but the chunk size is getting longer and longer in each chunk. The chuck number 5 it longest one with 516 chars, it seem too long.
 
 
 **Why this target:**
@@ -80,23 +99,20 @@ The five questions are the ones in `OUT_OF_SCOPE` at the bottom of
 
 ## 5. Your choice
 
-<!-- YOU WRITE THIS ONE TOO.
-
-     Pick something you actually care about getting right. It could be about
-     speed, about refusals, about a particular kind of question your corpus
-     handles badly, about source attribution being correct rather than merely
-     present — anything, as long as it names a number or an observable
-     outcome. -->
+I should read the txt file, and ask the right question. For example, when I ask what time is the library open on the 
+weekend. It do not have the right answer.
 
 
 
 **Why this target:**
-
+Because the right answer come from the document, that why we need to know the content first. before asking the question.
+After that we can compare if it return the right size of chuck.
 
 
 ---
 
-<!-- ─────────────────────────────────────────────────────────────────────────
+The
+─────────────────────────────────────────────────────────────────────────
      UNIT 2 — read this before you change anything above.
 
      If a criterion turns out to be BROKEN rather than merely unmet, you can

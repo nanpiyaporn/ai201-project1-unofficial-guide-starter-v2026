@@ -180,25 +180,26 @@ The number you set in config.py, and how you got there.
      Milestone 5. 
 
 **1.**
+I asked Claude to write the chunking function from this assignment, but it did not work. Claude do not understand this question.
 
 **2.**
 
-<!-- ── Stretch features ─────────────────────────────────────────────────────
+ ── Stretch features ─────────────────────────────────────────────────────
      Doing one? Say so here BEFORE you start. A feature this README never
      claims earns nothing.
-     ───────────────────────────────────────────────────────────────────────── -->
+     ───────────────────────────────────────────────────────────────────────── 
 
 ---
 
 # Unit 2
 
-<!-- These sections get ADDED to what's already above. Don't delete or rewrite
+These sections get ADDED to what's already above. Don't delete or rewrite
      unit 1 — the point is that someone can see what you said before you knew
-     how it went. -->
+     how it went. 
 
 ## Run Log — Before
 
-<!-- Your five criteria, three runs each. `python run_eval.py --label before`
+ Your five criteria, three runs each. `python run_eval.py --label before`
      runs the questions, puts the OUT_OF_SCOPE ones through the gate, and
      writes it all into results/ for you. Targets come from criteria.md; the
      verdict column is your call.
@@ -216,20 +217,20 @@ The number you set in config.py, and how you got there.
 | 4. | | | | | |
 | 5. | | | | | |
 
-<!-- Underneath, paste the REAL output for each criterion from one of your
+ Underneath, paste the REAL output for each criterion from one of your
      runs — the actual text your system produced, not a description of it.
-     Name the file and function that produced it. -->
+     Name the file and function that produced it. 
 
 ## Verdicts
 
-<!-- MET or MISSED for each of the five, against the target you wrote last
+ MET or MISSED for each of the five, against the target you wrote last
      unit — not a new one. Plus a sentence on how you decided. That sentence
      matters most where it was close.
 
      If your target said 4 of 5 and your runs came out 4, 3, 4, that's a MISS.
      The target has to hold, not show up occasionally.
 
-     Milestone 2. -->
+     Milestone 2. 
 
 | # | Criterion | Verdict | How I decided |
 |---|---|---|---|
@@ -241,7 +242,7 @@ The number you set in config.py, and how you got there.
 
 ## Diagnoses
 
-<!-- For each miss: which stage caused it, and how. The stage alone isn't
+ For each miss: which stage caused it, and how. The stage alone isn't
      enough — you need the mechanism.
 
      Not a diagnosis: "Question 3 didn't work."
@@ -265,13 +266,13 @@ The number you set in config.py, and how you got there.
 
 **Why I picked it:**
 
-<!-- Connect it to a specific diagnosis above in one sentence. If you can't,
-     you picked a fix because it sounded impressive. -->
+ Connect it to a specific diagnosis above in one sentence. If you can't,
+     you picked a fix because it sounded impressive. 
 
 ### Run Log — After
 
-<!-- Same format, same five criteria, three runs each.
-     `python run_eval.py --label after` -->
+ Same format, same five criteria, three runs each.
+     `python run_eval.py --label after` 
 
 | Criterion | Target | Run 1 | Run 2 | Run 3 | Verdict |
 |---|---|---|---|---|---|
@@ -283,26 +284,26 @@ The number you set in config.py, and how you got there.
 
 **Did it help?**
 
-<!-- Say plainly whether it did, and how you know. If it made things worse,
+ Say plainly whether it did, and how you know. If it made things worse,
      say that — a change that backfired, honestly reported, earns full credit
      and is more interesting than one that worked. What matters is that you can
      tell.
 
-     Milestone 4. -->
+     Milestone 4. 
 
 ## What's Still Broken
 
-<!-- For each criterion still missed after your fix: what you'd do about it,
+For each criterion still missed after your fix: what you'd do about it,
      and why you stopped where you did.
 
      "I ran out of time" is fine if it's true. Pretending nothing is left is
      not.
 
-     Milestone 5. -->
+     Milestone 5.
 
 ## What I'd Do Differently
 
-<!-- Knowing what you know now — which of your five criteria would you write
+Knowing what you know now — which of your five criteria would you write
      differently, and why?
 
-     Milestone 5. -->
+     Milestone 5. 
