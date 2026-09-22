@@ -220,7 +220,42 @@ These sections get ADDED to what's already above. Don't delete or rewrite
  Underneath, paste the REAL output for each criterion from one of your
      runs — the actual text your system produced, not a description of it.
      Name the file and function that produced it. 
+_______
+python run_eval.py --label before
 
+What do students say about wait times at Commons during lunch?
+  run 1: —  (best distance 0.308)
+  run 2: —  (best distance 0.308)
+  run 3: —  (best distance 0.308)
+
+When is the add/drop period for this semester?
+  run 1: —  (best distance 0.273)
+  run 2: —  (best distance 0.273)
+  run 3: —  (best distance 0.273)
+
+What time does the library close on weekends?
+  run 1: —  (best distance 0.414)
+  run 2: —  (best distance 0.414)
+  run 3: —  (best distance 0.414)
+
+How do I get a parking permit?
+  run 1: —  (best distance 0.534)
+  run 2: —  (best distance 0.534)
+  run 3: —  (best distance 0.534)
+
+What majors are offered in the Computer Science department?
+  run 1: —  (best distance 0.579)
+  run 2: —  (best distance 0.579)
+  run 3: —  (best distance 0.579)
+
+Out-of-scope questions (the gate should refuse these):
+  refused  (best distance 0.897)  What is the capital of Thailand?
+  LET THROUGH  (best distance 0.549)  How do I win the lottery?
+  refused  (best distance 0.856)  Who won the 2026 World Cup?
+  refused  (best distance 0.734)  How to get a software engineering job?
+  LET THROUGH  (best distance 0.568)  How to finish a master degree in May 2027?
+  -> gate refused 3 of 5
+__________________________
 ## Verdicts
 
  MET or MISSED for each of the five, against the target you wrote last
@@ -281,7 +316,52 @@ These sections get ADDED to what's already above. Don't delete or rewrite
 | 3. Gate stops out-of-corpus questions | 4 of 5 |  |  |  |  |
 | 4. | | | | | |
 | 5. | | | | | |
+____________________
+$ python run_eval.py --runs 5 
 
+What do students say about wait times at Commons during lunch?
+  run 1: —  (best distance 0.308)
+  run 2: —  (best distance 0.308)
+  run 3: —  (best distance 0.308)
+  run 4: —  (best distance 0.308)
+  run 5: —  (best distance 0.308)
+
+When is the add/drop period for this semester?
+  run 1: —  (best distance 0.273)
+  run 2: —  (best distance 0.273)
+  run 3: —  (best distance 0.273)
+  run 4: —  (best distance 0.273)
+  run 5: —  (best distance 0.273)
+
+What time does the library close on weekends?
+  run 1: —  (best distance 0.414)
+  run 2: —  (best distance 0.414)
+  run 3: —  (best distance 0.414)
+  run 4: —  (best distance 0.414)
+  run 5: —  (best distance 0.414)
+
+How do I get a parking permit?
+  run 1: —  (best distance 0.534)
+  run 2: —  (best distance 0.534)
+  run 3: —  (best distance 0.534)
+  run 4: —  (best distance 0.534)
+  run 5: —  (best distance 0.534)
+
+What majors are offered in the Computer Science department?
+  run 1: —  (best distance 0.579)
+  run 2: —  (best distance 0.579)
+  run 3: —  (best distance 0.579)
+  run 4: —  (best distance 0.579)
+  run 5: —  (best distance 0.579)
+
+Out-of-scope questions (the gate should refuse these):
+  refused  (best distance 0.897)  What is the capital of Thailand?
+  LET THROUGH  (best distance 0.549)  How do I win the lottery?
+  refused  (best distance 0.856)  Who won the 2026 World Cup?
+  refused  (best distance 0.734)  How to get a software engineering job?
+  LET THROUGH  (best distance 0.568)  How to finish a master degree in May 2027?
+  -> gate refused 3 of 5
+_____________________________________________
 **Did it help?**
 
  Say plainly whether it did, and how you know. If it made things worse,
@@ -307,3 +387,5 @@ Knowing what you know now — which of your five criteria would you write
      differently, and why?
 
      Milestone 5. 
+
+I still getting error. I will fix it week.
