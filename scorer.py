@@ -1,8 +1,11 @@
-def load_scorer():
-    """Use scorer.py if the student has built it. Otherwise run unscored."""
-    try:
-        import scorer  # noqa: PLC0415
-    except ImportError:
-        return None
-    judge = getattr(scorer, "judge", None)
-    return judge if callable(judge) else None
+import gate
+
+def judge(question, expects, answer, results) -> bool:
+    if answer == gate.REFUSAL:
+        return False
+    # your comparison here, using `expects`
+    ...
+
+if __name__ == "__main__":
+    print(judge("test?", "late September", "Add/drop runs through late September.", []))
+    print(judge("test?", "late September", "I don't have enough information about that.", []))
