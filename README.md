@@ -212,11 +212,12 @@ These sections get ADDED to what's already above. Don't delete or rewrite
 
 | Criterion | Target | Run 1 | Run 2 | Run 3 | Verdict |
 |---|---|---|---|---|---|
-| 1. Retrieved chunk contains the answer | 4 of 5 |  |  |  |  |
-| 2. Every answer names a source | 5 of 5 |  |  |  |  |
-| 3. Gate stops out-of-corpus questions | 4 of 5 |  |  |  |  |
-| 4. | | | | | |
-| 5. | | | | | |
+| 1. Retrieved chunk contains the answer | 4 of 5 |  |  |  | MET|
+| 2. Every answer names a source | 5 of 5 |  |  |  | MET |
+| 3. Gate stops out-of-corpus questions | 4 of 5 |  |  |  |  MET|
+
+| 4. What do students say about wait times at Commons during lunch?| 5 of 5| 5 of 5| 5 of 5| | MET|
+| 5. When is the add/drop period for this semester?| 5 of 5| 5 of 5|5 of 5 | |MET |
 
  Underneath, paste the REAL output for each criterion from one of your
      runs — the actual text your system produced, not a description of it.
@@ -270,11 +271,12 @@ __________________________
 
 | # | Criterion | Verdict | How I decided |
 |---|---|---|---|
-| 1 |  |  |  |
-| 2 |  |  |  |
-| 3 |  |  |  |
-| 4 |  |  |  |
-| 5 |  |  |  |
+| 1 | What do students say about wait times at Commons during lunch? | MET | AGREE |
+| 2 | When is the add/drop period for this semester? | MET | AGREE |
+| 3 | What time does the library close on weekends? | MET | AGREE |
+| 4 | How do I get a parking permit? | MET | AGREE |
+| 5 | What majors are offered in the Computer Science department? | MET |AGREE  |
+
 
 ## Diagnoses
 
@@ -294,13 +296,22 @@ __________________________
      Missed nothing? Say so, then say honestly whether your targets were set
      low, and which one you'd tighten and to what.
 
+The in-scope and out-of-score distances overlap.
+
+Foe example the parking question (in scope) is 0.534, but the lottory question ( out-of-scope) is 0.549 and the master degree is 0.568. A cutoff of 0.6 sites above all of them can pass
+
      Milestone 3. -->
 
 ## The Improvement
 
 **What I changed:**
+I change the 'THRESHOLD =0.6' to 'THRESHOLD =0.54' that should return *refused*
+
+
 
 **Why I picked it:**
+
+Because the 'THRESHOLD  < 0.6'
 
  Connect it to a specific diagnosis above in one sentence. If you can't,
      you picked a fix because it sounded impressive. 
