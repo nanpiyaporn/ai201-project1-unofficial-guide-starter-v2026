@@ -23,11 +23,19 @@ names a target of "4 of 5", and four of three is not a thing.
 
 QUESTIONS = [
     # {"question": "...", "expects": "..."},
-    {"question": "What do students say about wait times at Commons during lunch?", "expects": "long"},
-    {"question": "When is the add/drop period for this semester?", "expects": "late September"},
-    {"question": "What time does the library close on weekends?", "expects": "shorter hours"},
-    {"question": "How do I get a parking permit?", "expects": "short-term"},
-    {"question": "What majors are offered in the Computer Science department?", "expects": "B.S."},
+    #
+    # ORIGINAL expects (unit 1). Kept so the history is visible:
+    #   Commons wait -> "long"   add/drop -> "late September"   library -> "shorter hours"
+    #   parking -> "short-term"  CS majors -> "B.S."
+    # REVISED in unit 2: none of those phrases appear in the documents, so no
+    # correct answer could ever contain them. The scorer could not measure
+    # anything. The new values are words the source documents actually use.
+    # "|" means "any of these". "REFUSE" means the right answer is "I don't know".
+    {"question": "What do students say about wait times at Commons during lunch?", "expects": "20 to 25 minutes"},  # dining_kestrel_commons.txt
+    {"question": "When is the add/drop period for this semester?", "expects": "second week|week two"},              # admin_add_drop_deadline.txt
+    {"question": "What time does the library close on weekends?", "expects": "2am|2 am|2:00"},                     # study_library_hours.txt (no weekend hours in corpus)
+    {"question": "How do I get a parking permit?", "expects": "august"},                                           # admin_parking_permits.txt
+    {"question": "What majors are offered in the Computer Science department?", "expects": "REFUSE"},              # no document lists majors
 ]
 
 # Questions from a different world entirely. Your gate should refuse all five.
