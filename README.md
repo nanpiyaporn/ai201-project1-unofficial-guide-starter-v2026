@@ -212,51 +212,17 @@ These sections get ADDED to what's already above. Don't delete or rewrite
 
 | Criterion | Target | Run 1 | Run 2 | Run 3 | Verdict |
 |---|---|---|---|---|---|
-| 1. Retrieved chunk contains the answer | 4 of 5 | 5 of 5 | 5 of 5 | 5 of 5 | MET|
-| 2. Every answer names a source | 5 of 5 | 5 of 5 | 5 of 5 | 5 of 5 | MET |
-| 3. Gate stops out-of-corpus questions | 4 of 5 | 5 of 5 | 5 of 5 | 5 of 5 |  MET|
+| 1. Retrieved chunk contains the answer | 4 of 5 | 5 / 5 | 5/5 | 5/5 | MET|
+| 2. Every answer names a source | 5 of 5 | 4 /5 | 4 /5 | 4 /5 | MISSED |
+| 3. Gate stops out-of-corpus questions | 4 of 5 | 3/5 | 3/5 | 3/5 |  MISSED|
 
-| 4. Something about my chunks| 4 of 5| 4 of 5| 4 of 5| 4 of 5| MET|
-| 5. my choice| 4 of 5| 4 of 5|4 of 5 |4 of 5 |MET |
+
 
  Underneath, paste the REAL output for each criterion from one of your
      runs — the actual text your system produced, not a description of it.
      Name the file and function that produced it. 
-_______
-python run_eval.py --label before
 
-What do students say about wait times at Commons during lunch?
-  run 1: —  (best distance 0.308)
-  run 2: —  (best distance 0.308)
-  run 3: —  (best distance 0.308)
 
-When is the add/drop period for this semester?
-  run 1: —  (best distance 0.273)
-  run 2: —  (best distance 0.273)
-  run 3: —  (best distance 0.273)
-
-What time does the library close on weekends?
-  run 1: —  (best distance 0.414)
-  run 2: —  (best distance 0.414)
-  run 3: —  (best distance 0.414)
-
-How do I get a parking permit?
-  run 1: —  (best distance 0.534)
-  run 2: —  (best distance 0.534)
-  run 3: —  (best distance 0.534)
-
-What majors are offered in the Computer Science department?
-  run 1: —  (best distance 0.579)
-  run 2: —  (best distance 0.579)
-  run 3: —  (best distance 0.579)
-
-Out-of-scope questions (the gate should refuse these):
-  refused  (best distance 0.897)  What is the capital of Thailand?
-  LET THROUGH  (best distance 0.549)  How do I win the lottery?
-  refused  (best distance 0.856)  Who won the 2026 World Cup?
-  refused  (best distance 0.734)  How to get a software engineering job?
-  LET THROUGH  (best distance 0.568)  How to finish a master degree in May 2027?
-  -> gate refused 3 of 5
 __________________________
 ## Verdicts
 
@@ -323,13 +289,12 @@ Because the 'THRESHOLD  < 0.6'
 
 | Criterion | Target | Run 1 | Run 2 | Run 3 | Verdict |
 |---|---|---|---|---|---|
-| 1. Retrieved chunk contains the answer | 4 of 5 | 4 of 5 | 4 of 5 | 4 of 5 | MET |
-| 2. Every answer names a source | 5 of 5 | 4 of 5 | 4 of 5 | 4 of 5 |MET  |
-| 3. Gate stops out-of-corpus questions | 4 of 5 | 4 of 5 |4 of 5  | 4 of 5 |  MISSED|
-| 4. Something about my chunks | 4 of 5 | 4 of 5 | 4 of 5 | 4 of 5 | MET |
-| 5. My choice| 4 of 5 | 4 of 5 | 4 of 5 | 4 of 5 | MET |
+| 1. Retrieved chunk contains the answer | 4 of 5 | 5/5 | 4/5 | 4/5 | MET |
+| 2. Every answer names a source | 5 of 5 | 4/5 | 4/5 | 4/5 |MISSED  |
+| 3. Gate stops out-of-corpus questions | 4 of 5 | 5/5 |5/5 | 5/5 |  MET|
+
 ____________________
-$ python run_eval.py --runs 5 
+ 
 
 
 _____________________________________________
@@ -344,11 +309,12 @@ _____________________________________________
 
 ## What's Still Broken
 
-
+Yes, it still broken. Adjust to lower the 'THRESHOLD' to lower than 0.54. But the question about What majors are offered in the Computer Science department? give me the chunk was 0.579 that mean this question should *REFUSE* instead of *PASS* that I can confirm this in results/run_2026-09-29_1844_after.md
 
 For each criterion still missed after your fix: what you'd do about it,
-     and why you stopped where you did.
-Adjust to lower the 'THRESHOLD' to between 0.45-0.54
+     
+ The 'run_eval.py' asked 'scorer.py' that this question should return *REFUSE*. That mean the correct answer is to sya "I don't know" because no document proof.    
+
      
 
      Milestone 5.
@@ -360,4 +326,5 @@ Knowing what you know now — which of your five criteria would you write
 
      Milestone 5. 
 
-check if the txt file has a correct information and clear content. Then, compare the answer with the difference number of'THRESHOLD'
+check if the txt file has a correct information and clear content. Then, compare the answer with the difference number of'THRESHOLD'.
+I confuse myself about 4/5, 5/5 , missed, and met. Because there are 10 questions. The questions are only in-text 5 and out-of-scope 5. I will keep *PASS* or *REFUSE** in each question instead. with chung number because some question pass with 'THRESHOLD' > 0.54 that is something we need to find out, why it happen?

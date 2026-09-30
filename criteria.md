@@ -93,7 +93,8 @@ see a multiple line. but the chunk size is getting longer and longer in each chu
 
 **Why this target:**
 
-
+question 4": "How do I get a parking permit?" there are show the source
+(Source: admin_parking_permits.txt )
 
 ---
 
@@ -119,31 +120,20 @@ The
      revise it, and that earns credit. But never delete or edit the original
      line. Add the revision underneath it, like this:
 
-         ## 1. Retrieved chunks contain the answer
+     The question "What majors are offered in the Computer Science department?
+  run 1: pass  (best distance 0.579)
+  run 2: pass  (best distance 0.579)
+  run 3: pass  (best distance 0.579) 
+  But I set the 'THRESHOLD' <  0.54, It should fail, that means it could not file the answer from the txt file for answer this question. 
+  P.S. I could not file the answer from this question myself from the text file. I just confused why is pass all 3 runs.
 
-         For at least 4 of my 5 test questions, the retrieved chunks include
-         one that contains the answer.
+For out-of-scope question are fair as you can see the 'THRESHOLD' <  0.54 that
+give us *refusedd* on the lottery question(0.549) and the How to finish a master degree in May 2027 question (0.568)
 
-         **Why this target:** ...
-
-         > **Revised in unit 2:** For at least 4 of 5 questions, the top three
-         > results contain the answer.
-         >
-         > **Why revised:** I couldn't judge "the chunks include one that
-         > contains the answer" the same way twice — I scored two questions
-         > differently on Monday than on Wednesday. The new version is
-         > something I can actually check.
-
-     That's a revision because the criterion couldn't be MEASURED.
-
-     Lowering a target because you missed it is not a revision, and it costs
-     you the point:
-
-         ✗ "I said 4 of 5 but got 2 of 5, so 2 of 5 is more realistic."
-
-     A number you missed stays where it is, gets diagnosed, and gets a fix
-     attempted. That's where the points are.
-
-     The whole reason the originals stay visible is so someone can see what you
-     said before you knew the answer.
-     ───────────────────────────────────────────────────────────────────────── -->
+Out-of-scope questions (the gate should refuse these):
+  refused  (best distance 0.897)  What is the capital of Thailand?
+  refused  (best distance 0.549)  How do I win the lottery?
+  refused  (best distance 0.856)  Who won the 2026 World Cup?
+  refused  (best distance 0.734)  How to get a software engineering job?
+  refused  (best distance 0.568)  How to finish a master degree in May 2027?
+  -> gate refused 5 of 5
